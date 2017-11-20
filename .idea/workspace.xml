@@ -70,13 +70,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JokeActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JokeActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jokelibrary/src/main/java/com/example/android/jokelibrary/JokeActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="615">
               <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JokeFactory.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jokelibrary/src/main/java/com/example/android/jokelibrary/JokeFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1026#1027#0" expanded="true" />
+                <element signature="e#1054#1055#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -4353,6 +4367,7 @@
         <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/jokelibrary/src/main/res/layout/activity_joke.xml" />
         <option value="$PROJECT_DIR$/jokelibrary/src/main/java/com/example/android/jokelibrary/JokeActivity.java" />
+        <option value="$PROJECT_DIR$/jokelibrary/src/main/java/com/example/android/jokelibrary/JokeFactory.java" />
       </list>
     </option>
   </component>
@@ -5116,6 +5131,18 @@
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jokelibrary/src/main/java/com/example/android/jokelibrary/JokeFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1026#1027#0" expanded="true" />
+            <element signature="e#1054#1055#0" expanded="true" />
           </folding>
         </state>
       </provider>
