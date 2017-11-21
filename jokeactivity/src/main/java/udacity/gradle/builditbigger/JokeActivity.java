@@ -7,7 +7,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import com.udacity.gradle.builditbigger.jokelibrary.R;
 
 /**
  * Created by lsitec101.macedo on 20/11/17.
@@ -24,7 +23,8 @@ public class JokeActivity extends AppCompatActivity {
         mIntent.putExtra(JOKE, word);
     }
 
-    public static Intent getIntent() {
+    public Intent getIntent() {
+
         return mIntent;
     }
 

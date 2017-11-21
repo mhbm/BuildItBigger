@@ -6,7 +6,6 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +29,7 @@ public class FragmentJoke extends Fragment {
 
     protected void getOneJoke() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            getLoaderManager().initLoader(JOKE_LOADER_ID,null,getContext());
+            getLoaderManager().initLoader(JOKE_LOADER_ID,null,null);
         }
     }
 
