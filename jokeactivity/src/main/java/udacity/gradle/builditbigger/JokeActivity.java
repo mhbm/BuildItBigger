@@ -24,6 +24,10 @@ public class JokeActivity extends AppCompatActivity {
         mIntent.putExtra(JOKE, word);
     }
 
+    public static Intent getIntent() {
+        return mIntent;
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

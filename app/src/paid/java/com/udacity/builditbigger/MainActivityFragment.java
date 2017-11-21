@@ -13,7 +13,7 @@ import com.google.android.gms.ads.AdView;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class MainActivityFragment extends Fragment {
+public class MainActivityFragment extends FragmentJoke {
 
     public MainActivityFragment() {
     }
@@ -34,8 +34,8 @@ public class MainActivityFragment extends Fragment {
         return root;
     }
 
-    public void tellAJoke() {
-        getJoke();
+    public void showJoke() {
+        getOneJoke();
     }
 
 }

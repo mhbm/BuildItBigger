@@ -6,6 +6,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.udacity.builditbigger.MainActivityFragment;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
 //        Toast.makeText(this, "derp", Toast.LENGTH_SHORT).show();
 //        final MainActivityFragment fragment = (MainActivityFragment) getSupportFragmentManager().findFragmentById(R.id.fragment);
 //        fragment.tellJoke();
+        MainActivityFragment fragment = (MainActivityFragment) getSupportFragmentManager().findFragmentById(R.id.fragment);
+        fragment.getOneJoke();
     }
 
 

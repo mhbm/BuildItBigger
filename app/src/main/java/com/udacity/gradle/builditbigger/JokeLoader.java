@@ -2,34 +2,42 @@ package com.udacity.gradle.builditbigger;
 
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.AsyncTaskLoader;
 import android.support.v4.content.Loader;
 import android.util.Log;
-import com.udacity.gradle.builditbigger.back
+
+import com.google.api.client.extensions.android.http.AndroidHttp;
+import com.google.api.client.extensions.android.json.AndroidJsonFactory;
+import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
+import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
+import com.udacity.gradle.builditbigger.backend.jokeApi.JokeApi;
+
+import java.io.IOException;
+
+import udacity.gradle.builditbigger.JokeActivity;
 
 /**
  * Created by lsitec101.macedo on 21/11/17.
  */
 
-public class JokeLoader implements LoaderManager.LoaderCallbacks<Cursor> {
+public class JokeLoader implements LoaderManager.LoaderCallbacks<String> {
 
-    private static final int JOKE_LOADER_ID = 1;
     private static final String TAG = JokeLoader.class.getSimpleName();
     Context mContext;
-    Cursor mTaskData;
-    JokeApi jokeApi = null;
+    String mTaskData;
+    JokeApi mJokeApi = null;
 
     public JokeLoader(Context context) {
         mContext = context;
         mTaskData = null;
+        mJokeApi = null;
     }
 
     @Override
-    public Loader<Cursor> onCreateLoader(int id, Bundle args) {
-        return new AsyncTaskLoader<Cursor>(mContext) {
+    public Loader<String> onCreateLoader(int id, Bundle args) {
+        return new AsyncTaskLoader<String>(mContext) {
 
 
             @Override
@@ -42,24 +50,34 @@ public class JokeLoader implements LoaderManager.LoaderCallbacks<Cursor> {
             }
 
             @Override
-            public Cursor loadInBackground() {
+            public String loadInBackground() {
                 try {
-                    return getContext().getContentResolver().query(
-                            null,
-                            null,
-                            null,
-                            null,
+                    JokeApi.Builder builderJokeAPI = new JokeApi.Builder(
+                            AndroidHttp.newCompatibleTransport(),
+                            new AndroidJsonFactory(),
                             null
-                    );
+                    ).setRootUrl("http://10.0.2.2:8080/_ah/api/")
+                            .setGoogleClientRequestInitializer(
+                                    new GoogleClientRequestInitializer() {
+                                        @Override
+                                        public void initialize(AbstractGoogleClientRequest<?> request) throws IOException {
+                                            request.setDisableGZipContent(true);
+                                        }
+                                    }
+                            );
+                    mJokeApi = builderJokeAPI.build();
+                    mTaskData = mJokeApi.tellOneJoke().execute().getData();
+                    return mTaskData;
+
                 } catch (Exception e) {
-                    Log.e(TAG, " Failed to asynchrously load data" );
+                    Log.e(TAG, " Failed to asynchrously load data");
                     e.printStackTrace();
                     return null;
                 }
             }
 
             @Override
-            public void deliverResult(Cursor data) {
+            public void deliverResult(String data) {
                 mTaskData = data;
                 super.deliverResult(data);
             }
@@ -67,14 +85,15 @@ public class JokeLoader implements LoaderManager.LoaderCallbacks<Cursor> {
     }
 
     @Override
-    public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
-        Intent intent = JokeView.makeIntent(mContext, data);
+    public void onLoadFinished(Loader<String> loader, String data) {
+        JokeActivity jokeActivity = new JokeActivity();
+        jokeActivity.putJokeinIntent(mContext, data);
+        Intent intent = jokeActivity.getIntent();
         mContext.startActivity(intent);
-
     }
 
     @Override
-    public void onLoaderReset(Loader<Cursor> loader) {
+    public void onLoaderReset(Loader<String> loader) {
         mTaskData = null;
     }
 }
