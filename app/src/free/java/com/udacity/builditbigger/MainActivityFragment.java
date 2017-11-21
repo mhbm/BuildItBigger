@@ -15,6 +15,8 @@ import com.google.android.gms.ads.InterstitialAd;
 import com.udacity.gradle.builditbigger.FragmentJoke;
 import com.udacity.gradle.builditbigger.R;
 
+import java.io.IOException;
+
 
 /**
  * A placeholder fragment containing a simple view.
@@ -36,7 +38,11 @@ public class MainActivityFragment extends FragmentJoke {
             @Override
             public void onAdClosed() {
                 requestNewInterstitial();
-                getOneJoke();
+                try {
+                    getOneJoke();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -52,7 +58,7 @@ public class MainActivityFragment extends FragmentJoke {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
-    public void tellJokeAfterAd() {
+    public void tellJokeAfterAd() throws IOException {
         if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.show();
         } else {

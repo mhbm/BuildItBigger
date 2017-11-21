@@ -6,9 +6,12 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.io.IOException;
 
 /**
  * Created by lsitec101.macedo on 21/11/17.
@@ -27,10 +30,11 @@ public class FragmentJoke extends Fragment {
         return inflater.inflate(R.layout.fragment_main, container, false);
     }
 
-    protected void getOneJoke() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            getLoaderManager().initLoader(JOKE_LOADER_ID,null,null);
-        }
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    protected void getOneJoke() throws IOException {
+        JokeLoader jokeLoader = new JokeLoader(getContext());
+        System.out.println("kkkkkkkkkkk");
+        System.out.println(jokeLoader.test());
     }
 
 }

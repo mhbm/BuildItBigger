@@ -29,6 +29,26 @@ public class JokeLoader implements LoaderManager.LoaderCallbacks<String> {
     String mTaskData;
     JokeApi mJokeApi = null;
 
+    public String test() throws IOException {
+        JokeApi.Builder builderJokeAPI = new JokeApi.Builder(
+                AndroidHttp.newCompatibleTransport(),
+                new AndroidJsonFactory(),
+                null
+        ).setRootUrl("http://10.0.2.2:8080/_ah/api/")
+                .setGoogleClientRequestInitializer(
+                        new GoogleClientRequestInitializer() {
+                            @Override
+                            public void initialize(AbstractGoogleClientRequest<?> request) throws IOException {
+                                request.setDisableGZipContent(true);
+                            }
+                        }
+                );
+        mJokeApi = builderJokeAPI.build();
+        return mJokeApi.tellOneJoke().execute().getData();
+
+
+    }
+
     public JokeLoader(Context context) {
         mContext = context;
         mTaskData = null;
@@ -90,6 +110,7 @@ public class JokeLoader implements LoaderManager.LoaderCallbacks<String> {
         jokeActivity.putJokeinIntent(mContext, data);
         Intent intent = jokeActivity.getIntent();
         mContext.startActivity(intent);
+        System.out.println("uhaseuhaseuheasuhuhsea");
     }
 
     @Override
