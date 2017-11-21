@@ -58,7 +58,7 @@ public class MainActivityFragment extends FragmentJoke {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
-    public void tellJokeAfterAd() throws IOException {
+    public void tellJoke() throws IOException {
         if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.show();
         } else {

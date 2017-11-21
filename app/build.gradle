@@ -41,4 +41,5 @@ dependencies {
     compile 'com.google.android.gms:play-services-ads:9.8.0'
     compile project(':jokeactivity')
     compile project(path: ':backend', configuration: 'android-endpoints')
+    compile 'com.google.appengine:appengine-api-1.0-sdk:1.9.42'
 }
