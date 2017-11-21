@@ -1,4 +1,4 @@
-package com.example.android.jokelibrary;
+package com.udacity.gradle.builditbigger;
 
 import java.util.ArrayList;
 import java.util.Random;

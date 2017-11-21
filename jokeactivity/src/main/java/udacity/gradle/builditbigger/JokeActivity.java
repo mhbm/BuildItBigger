@@ -1,4 +1,4 @@
-package com.example.android.jokelibrary;
+package udacity.gradle.builditbigger;
 
 import android.content.Context;
 import android.content.Intent;
