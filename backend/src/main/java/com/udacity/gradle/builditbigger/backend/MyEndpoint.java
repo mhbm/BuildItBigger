@@ -9,7 +9,7 @@ package com.udacity.gradle.builditbigger.backend;
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
-import com.udacity.gradle.builditbigger.*;
+import com.udacity.gradle.builditbigger.backend.;
 
 /** An endpoint class we are exposing */
 @Api(
