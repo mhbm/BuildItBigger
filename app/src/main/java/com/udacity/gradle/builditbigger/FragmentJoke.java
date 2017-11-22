@@ -16,11 +16,9 @@ import java.io.IOException;
  * Created by lsitec101.macedo on 21/11/17.
  */
 
-public class FragmentJoke extends Fragment {
+public abstract class FragmentJoke extends Fragment {
 
     Context mContext;
-
-    private static final int JOKE_LOADER_ID = 1;
 
     @TargetApi(Build.VERSION_CODES.M)
     @Override
@@ -29,6 +27,7 @@ public class FragmentJoke extends Fragment {
         return inflater.inflate(R.layout.fragment_main, container, false);
     }
 
+    public abstract void showJoke() throws IOException;
 
     protected void getOneJoke() throws IOException {
         new JokeLoader(mContext).execute(getActivity());

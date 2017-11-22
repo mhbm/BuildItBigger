@@ -7,7 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +42,7 @@ public class MainActivity extends AppCompatActivity {
 //        Toast.makeText(this, "derp", Toast.LENGTH_SHORT).show();
 //        final MainActivityFragment fragment = (MainActivityFragment) getSupportFragmentManager().findFragmentById(R.id.fragment);
 //        fragment.tellJoke();
-//        final MainActivityFragment fragment = (MainActivityFragment) getSupportFragmentManager().findFragmentById(R.id.fragment);
-//        fragment.getOneJoke();
+
     }
 
 
