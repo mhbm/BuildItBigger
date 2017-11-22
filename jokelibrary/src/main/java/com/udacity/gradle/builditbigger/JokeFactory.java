@@ -9,7 +9,7 @@ import java.util.Random;
 
 public class JokeFactory {
 
-    private ArrayList<String> jokes;
+    private static ArrayList<String> jokes;
 
     public JokeFactory() {
         jokes.add("Do que o diabo morreu? De diabetes");
@@ -20,7 +20,7 @@ public class JokeFactory {
         jokes.add("Qual o único pais que não tem padaria? O Jápão");
     }
 
-    public String returnOneJoke() {
+    public static String returnOneJoke() {
         int position  = new Random().nextInt(jokes.size() - 1);
         return jokes.get(position);
     }

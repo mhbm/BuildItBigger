@@ -37,11 +37,21 @@ public class MainActivityFragment extends MainActivityFragmentBase {
 
         adView.loadAd(adRequest);
 
-
+        mInterstitialAd = new InterstitialAd(getActivity());
+        //According to https://developers.google.com/admob/android/interstitial
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        requestNewInterstitial();
 
 
         return view;
 
+    }
+
+    private void requestNewInterstitial() {
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .build();
+        mInterstitialAd.loadAd(adRequest);
     }
 
 

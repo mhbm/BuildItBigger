@@ -35,9 +35,9 @@ public class JokeLoader extends AsyncTask<Context, Void, String> {
     protected String doInBackground(Context... params) {
         if (jokeApiService == null) {
 
-            JokeApi.Builder builder = new JokeApi.Builder(AndroidHttp.newCompatibleTransport(), new AndroidJsonFactory(), null)
-                    .setRootUrl("http://10.0.2.2:80/_ah/api/")
-                    .setApplicationName("backend")
+            JokeApi.Builder builder = new JokeApi.Builder(AndroidHttp.newCompatibleTransport(),
+                    new AndroidJsonFactory(), null)
+                    .setRootUrl("http://10.0.2.2:8080/_ah/api/")
                     .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
                         @Override
                         public void initialize(AbstractGoogleClientRequest<?> abstractGoogleClientRequest) throws IOException {
@@ -61,6 +61,7 @@ public class JokeLoader extends AsyncTask<Context, Void, String> {
         if (joke != null) {
             Intent viewJokeIntent = new Intent(mContext, JokeActivity.class);
             viewJokeIntent.putExtra(JokeActivity.getFinalStringJoke(), joke);
+            System.out.println("ERRO " + joke);
             mContext.startActivity(viewJokeIntent);
         } else {
             Toast.makeText(mContext, "Error!!!!", Toast.LENGTH_SHORT).show();
