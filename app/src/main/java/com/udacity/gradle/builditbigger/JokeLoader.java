@@ -45,6 +45,8 @@ public class JokeLoader extends AsyncTask<Context, Void, String> {
         context = params[0];
 
         try {
+            String teste = jokeApiService.tellOneJoke().execute().getData();
+            System.out.println("asuhuhsahuesauhase = " + teste);
             return jokeApiService.tellOneJoke().execute().getData();
         } catch (IOException e) {
             return e.getMessage();

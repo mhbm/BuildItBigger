@@ -27,6 +27,7 @@ public class MainActivityFragment extends FragmentJoke {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+
         View view = super.onCreateView(inflater, container, savedInstanceState);
         AdView adView = (AdView) view.findViewById(R.id.ad_view);
 
