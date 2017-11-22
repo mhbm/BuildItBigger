@@ -1,12 +1,12 @@
 package com.udacity.gradle.builditbigger;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
+import android.widget.Toast;
 
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
-import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
-import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
 import com.udacity.gradle.builditbigger.backend.jokeApi.JokeApi;
 
 import java.io.IOException;
@@ -21,32 +21,24 @@ public class JokeLoader extends AsyncTask<Context, Void, String> {
 
     private static JokeApi jokeApiService = null;
 
-    private Context context;
+    private static final String JOKE = "JOKE";
+
+    private Context mContext;
 
     public JokeLoader(Context context) {
-        this.context = context;
+        mContext = context;
     }
 
     @Override
     protected String doInBackground(Context... params) {
         if (jokeApiService == null) {
-            final JokeApi.Builder builder = new JokeApi.Builder(AndroidHttp.newCompatibleTransport(),
+            JokeApi.Builder builder = new JokeApi.Builder(AndroidHttp.newCompatibleTransport(),
                     new AndroidJsonFactory(), null)
-                    .setRootUrl("http://10.0.2.2:8080/_ah/api/")
-                    .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
-                        @Override
-                        public void initialize(AbstractGoogleClientRequest<?> abstractGoogleClientRequest) throws IOException {
-                            abstractGoogleClientRequest.setDisableGZipContent(true);
-                        }
-                    });
+                    .setRootUrl("https://udacity-jokebackend.appspot.com/_ah/api/");
             jokeApiService = builder.build();
         }
 
-        context = params[0];
-
         try {
-            String teste = jokeApiService.tellOneJoke().execute().getData();
-            System.out.println("asuhuhsahuesauhase = " + teste);
             return jokeApiService.tellOneJoke().execute().getData();
         } catch (IOException e) {
             return e.getMessage();
@@ -55,8 +47,13 @@ public class JokeLoader extends AsyncTask<Context, Void, String> {
 
     @Override
     protected void onPostExecute(String joke) {
-        JokeActivity jokeActivity = new JokeActivity();
-        jokeActivity.putJokeinIntent(context, joke);
-        context.startActivity(jokeActivity.getIntent());
+        if (joke != null) {
+            Intent viewJokeIntent = new Intent(mContext, JokeActivity.class);
+            viewJokeIntent.putExtra(JokeActivity.getFinalStringJoke(), joke);
+            mContext.startActivity(viewJokeIntent);
+        } else {
+            Toast.makeText(mContext, "Error!!!!", Toast.LENGTH_SHORT).show();
+            return;
+        }
     }
 }

@@ -15,6 +15,10 @@ public class JokeActivity extends AppCompatActivity {
     private static final String JOKE = "JOKE";
     TextView mTxtJoke;
 
+    public static String getFinalStringJoke() {
+        return JOKE;
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -24,8 +24,4 @@ public class MainActivityFragment extends FragmentJoke {
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
-    public void showJoke() {
-        getOneJoke();
-    }
-
 }
