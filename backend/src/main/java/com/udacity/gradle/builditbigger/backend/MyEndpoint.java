@@ -25,7 +25,7 @@ import com.udacity.gradle.builditbigger.JokeFactory;
 public class MyEndpoint {
 
     /** A simple endpoint method that takes a name and says Hi back */
-    @ApiMethod(name = "tellOneJoke")
+    @ApiMethod(name = "tellJoke")
     public MyBean tellJoke() {
         MyBean response = new MyBean();
         response.setData(new JokeFactory().returnOneJoke());

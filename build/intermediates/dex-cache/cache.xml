@@ -165,21 +165,21 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/backend/build/libs/backend-android-endpoints.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="38757977ad89f4ebbfd28abf3865351769c4b1a2">
+        <dex dex="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/transforms/dex/free/debug/folders/1000/4/backend-android-endpoints_3fb336f3e7a4a3170ffe5514a7aa66fc08256ad0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
         <dex dex="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/transforms/dex/free/debug/folders/1000/10/internal_impl-25.0.0_459d08f25ec2363c1d5f7a3227b2a71fe499e3dc/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/backend/build/libs/backend-android-endpoints.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.3"
-        sha1="4d058c348eb56869b8927ba673f84369fee28ebe">
-        <dex dex="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/transforms/dex/free/debug/folders/1000/4/backend-android-endpoints_3fb336f3e7a4a3170ffe5514a7aa66fc08256ad0/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -192,21 +192,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/exploded-aar/BuildItBiiger/jokeactivity/unspecified/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.3"
-        sha1="5bb43cc5cb77a327d1af2fa9ae9b776961393df9">
-        <dex dex="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/transforms/dex/free/debug/folders/1000/4/BuildItBiiger-jokeactivity-unspecified_eeea8d3c131b9fa1277a543abaa488c3e4a595e0/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
         <dex dex="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/transforms/dex/free/debug/folders/1000/10/internal_impl-25.0.0_29cf222ffb22570eb197e21c1322355d56c1d798/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/exploded-aar/BuildItBiiger/jokeactivity/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5bb43cc5cb77a327d1af2fa9ae9b776961393df9">
+        <dex dex="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/transforms/dex/free/debug/folders/1000/4/BuildItBiiger-jokeactivity-unspecified_eeea8d3c131b9fa1277a543abaa488c3e4a595e0/classes.dex" />
     </item>
     <item
         is-multidex="true"

@@ -7,6 +7,8 @@ import android.widget.Toast;
 
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
+import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
+import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
 import com.udacity.gradle.builditbigger.backend.jokeApi.JokeApi;
 
 import java.io.IOException;
@@ -32,14 +34,23 @@ public class JokeLoader extends AsyncTask<Context, Void, String> {
     @Override
     protected String doInBackground(Context... params) {
         if (jokeApiService == null) {
-            JokeApi.Builder builder = new JokeApi.Builder(AndroidHttp.newCompatibleTransport(),
-                    new AndroidJsonFactory(), null)
-                    .setRootUrl("https://udacity-jokebackend.appspot.com/_ah/api/");
+
+            JokeApi.Builder builder = new JokeApi.Builder(AndroidHttp.newCompatibleTransport(), new AndroidJsonFactory(), null)
+                    .setRootUrl("http://10.0.2.2:80/_ah/api/")
+                    .setApplicationName("backend")
+                    .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
+                        @Override
+                        public void initialize(AbstractGoogleClientRequest<?> abstractGoogleClientRequest) throws IOException {
+                            abstractGoogleClientRequest.setDisableGZipContent(true);
+                        }
+                    });
+            // end options for devappserver
+
             jokeApiService = builder.build();
         }
 
         try {
-            return jokeApiService.tellOneJoke().execute().getData();
+            return jokeApiService.tellJoke().execute().getData();
         } catch (IOException e) {
             return e.getMessage();
         }
