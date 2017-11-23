@@ -19,10 +19,10 @@ import com.udacity.gradle.builditbigger.R;
  */
 public class MainActivityFragment extends MainActivityFragmentBase {
 
+    //More information -> https://developers.google.com/admob/android/interstitial
     private InterstitialAd mInterstitialAd;
 
     public MainActivityFragment() {
-
     }
 
     @Override
@@ -48,10 +48,7 @@ public class MainActivityFragment extends MainActivityFragmentBase {
                 requestNewInterstitial();
             }
         });
-
         requestNewInterstitial();
-
-
         return view;
 
     }
@@ -62,6 +59,4 @@ public class MainActivityFragment extends MainActivityFragmentBase {
                 .build();
         mInterstitialAd.loadAd(adRequest);
     }
-
-
 }

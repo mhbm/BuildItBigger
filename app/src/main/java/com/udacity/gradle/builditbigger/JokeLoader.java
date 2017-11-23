@@ -45,7 +45,6 @@ public class JokeLoader extends AsyncTask<Void, Void, String> {
                         }
                     });
             // end options for devappserver
-
             jokeApiService = builder.build();
         }
 
@@ -66,7 +65,6 @@ public class JokeLoader extends AsyncTask<Void, Void, String> {
             if (joke != null) {
                 Intent viewJokeIntent = new Intent(mContext, JokeActivity.class);
                 viewJokeIntent.putExtra(JokeActivity.getFinalStringJoke(), joke);
-                System.out.println("ERRO " + joke);
                 mContext.startActivity(viewJokeIntent);
             } else {
                 Toast.makeText(mContext, "Error!!!!", Toast.LENGTH_SHORT).show();
