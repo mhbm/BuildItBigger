@@ -34,9 +34,28 @@ public class MainActivity extends AppCompatActivity {
 
     public void tellJoke(View view)
     {
-        System.out.println("aquiii");
         new JokeLoader(this).execute();
     }
 
-
+//    public static class FetchDisplayJokeLoader extends JokeLoader {
+//        private Context mContext;
+//
+//        public FetchDisplayJokeLoader(Context context) {
+//            super(context);
+//            mContext = context;
+//        }
+//
+//        @Override
+//        protected void onPostExecute(@Nullable String joke) {
+//            if (joke != null) {
+//                Intent viewJokeIntent = new Intent(mContext, JokeActivity.class);
+//                viewJokeIntent.putExtra(JokeActivity.getFinalStringJoke(), joke);
+//                mContext.startActivity(viewJokeIntent);
+//            } else {
+//                Toast.makeText(mContext, "Error!!!!", Toast.LENGTH_SHORT).show();
+//                return;
+//            }
+//        }
+//
+//    }
 }
