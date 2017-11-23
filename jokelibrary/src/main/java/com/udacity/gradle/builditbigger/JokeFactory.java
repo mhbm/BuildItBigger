@@ -9,8 +9,10 @@ import java.util.Random;
 
 public class JokeFactory {
 
+    //ArrayList about our Jokes
     private ArrayList<String> jokes = new ArrayList<>();
 
+    //Added our jokes in the arraylist. The jokes are in Portuguese Brazil
     public JokeFactory() {
         jokes.add("Do que o diabo morreu? De diabetes");
         jokes.add("O que fala o livro de Matemática para o livro de História? Não me venha com história que eu já estou cheio de problemas");
@@ -20,11 +22,13 @@ public class JokeFactory {
         jokes.add("Qual o único pais que não tem padaria? O Jápão");
     }
 
+    //Return a random joke of our ArrayList
     public String returnOneJoke() {
         int position  = new Random().nextInt(jokes.size() - 1);
         return jokes.get(position);
     }
 
+    // Return All jokes
     public ArrayList<String> returnAllJokes() {
         return jokes;
     }

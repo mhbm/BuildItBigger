@@ -12,19 +12,18 @@ import static com.google.android.gms.internal.zzs.TAG;
  */
 
 public class TestTask extends AndroidTestCase {
-    private final static String TAG_NAME = TestTask.class.getSimpleName();
 
-    public void testJokeIsNotEmpty(){
+
+    //Test About the empty joke
+    public void testJokeIsNotEmpty() {
         JokeLoader jokeLoader = new JokeLoader(getContext());
-            jokeLoader.testRun();
+        jokeLoader.testRun();
         jokeLoader.execute();
-        try
-        {
+        try {
             String joke = jokeLoader.get();
             assertNotNull(joke);
             assertTrue(joke.length() > 0);
-        }
-        catch (ExecutionException e) {
+        } catch (ExecutionException e) {
             Log.e(TAG, "testManyJokes: " + e.getMessage());
         } catch (InterruptedException e) {
             e.printStackTrace();
