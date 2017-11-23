@@ -140,21 +140,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/libs/internal_impl-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.3"
-        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
-        <dex dex="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/transforms/dex/paid/debug/folders/1000/10/internal_impl-25.0.0_7f7f99fd5f7b71701aaafae5202cab1008a2e0d0/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/lsitec101.macedo/Android/Sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.1/constraint-layout-solver-1.0.1.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="1ad79631209e77b0a2730fc112b4cc0c66a95132">
         <dex dex="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/transforms/dex/paid/debug/folders/1000/10/constraint-layout-solver-1.0.1_2efe5e131d9a45c2210716e0b5a18971acd01245/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/transforms/dex/paid/debug/folders/1000/10/internal_impl-25.0.0_7f7f99fd5f7b71701aaafae5202cab1008a2e0d0/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -212,21 +212,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.3"
-        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
-        <dex dex="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/transforms/dex/paid/debug/folders/1000/10/com.android.support-support-vector-drawable-25.0.0_04b860503fc5997faacec58dd6f0b21240edbe57/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.3"
         sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
         <dex dex="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/transforms/dex/paid/debug/folders/1000/10/com.android.support-appcompat-v7-25.0.0_f0d183ddd82d669abbbf1f2f49e91fc5b13e8548/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/transforms/dex/paid/debug/folders/1000/10/com.android.support-support-vector-drawable-25.0.0_04b860503fc5997faacec58dd6f0b21240edbe57/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -270,7 +270,7 @@
         jumboMode="false"
         optimize="true"
         revision="24.0.3"
-        sha1="3083c288aa95e5da18b6095f7af5db43f90d20d5">
+        sha1="9395fdb82f99a99b951a7efa1fa9203f3e86b2ab">
         <dex dex="/home/lsitec101.macedo/Projetos/Udacity/BuildItBiiger/app/build/intermediates/transforms/dex/paid/debug/folders/1000/4/backend-android-endpoints_3fb336f3e7a4a3170ffe5514a7aa66fc08256ad0/classes.dex" />
     </item>
     <item
