@@ -5,14 +5,13 @@ import android.util.Log;
 
 import java.util.concurrent.ExecutionException;
 
-import static com.google.android.gms.internal.zzs.TAG;
-
 /**
  * Created by lsitec101.macedo on 22/11/17.
  */
 
 public class TestTask extends AndroidTestCase {
 
+    private final String TAG = TestTask.class.getSimpleName();
 
     //Test About the empty joke
     public void testJokeIsNotEmpty() {
